@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import path from "path";
 import { fileURLToPath } from "url";
 import connectDB from "./db/db.js";
+import userRouter from "./routes/user.routes.js";
 
 dotenv.config();
 
@@ -19,6 +20,9 @@ app.use(cors());
 app.use(express.json()); // Parses JSON bodies
 app.use(cookieParser());
 app.use(urlencoded({ extended: true }));
+
+
+app.use("/api/v1/user",userRouter);
 
 // Connect to DB and start the server
 connectDB()

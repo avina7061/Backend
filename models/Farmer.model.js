@@ -73,3 +73,4 @@ const FarmerSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
+export default mongoose.model("Farmer", FarmerSchema);

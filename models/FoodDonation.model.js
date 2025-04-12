@@ -56,11 +56,7 @@ const FoodDonationSchema = new mongoose.Schema(
       type: Boolean,
       default: true, // Donations are free
     },
-    claimedBy: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: 'Receiver', // This links to the receiver model
-      required: true,
-    },
+    
   },
   { timestamps: true }
 );
